@@ -15,8 +15,8 @@ public class Armstrong {
 		int temp=num;
 		while(temp>0) {
 			rev=temp%10;
-			temp=temp/10;
 			sum=sum+(rev*rev*rev);
+			temp=temp/10;
 		}
 		if (sum==num) {
 			System.out.println("Armstrong");

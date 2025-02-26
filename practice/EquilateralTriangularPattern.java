@@ -6,12 +6,12 @@ public class EquilateralTriangularPattern {
 		// TODO Auto-generated method stub
 		int num=6;
 		
-		for(int i=0;i<num;i++) {
-			for(int j=0;j<num-i;j++) {
+		for(int i=1;i<=num;i++) {
+			for(int j=1;j<=num-i;j++) {
 				System.out.print(" ");
 			}
-			for(int j=0;j<i;j++) {
-				System.out.print("* ");
+			for(int k=1;k<=i;k++) {
+				System.out.print(" "+k+" ");
 		}
 			System.out.println();
 
