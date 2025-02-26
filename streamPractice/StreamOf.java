@@ -12,13 +12,6 @@ public class StreamOf {
 		return true;
 		})
 		.forEach(s -> System.out.println("forEach: " + s));
-		
-		
-		
-		
-		
-		//.sorted()
-	//	.forEach(System.out::println);
 
 	}
 
