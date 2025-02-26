@@ -1,35 +1,35 @@
 package streamPractice;
+
 import java.util.Arrays;
 import java.util.List;
 
-class Employee {
-	String empName;
-	String depName;
-	public Employee(String empName, String depName) {
+class Employee{
+	String employeeName;
+	String empDepartment;
+	public Employee(String employeeName, String empDepartment) {
 		super();
-		this.empName = empName;
-		this.depName = depName;
+		this.employeeName = employeeName;
+		this.empDepartment = empDepartment;
 	}
-	public String getEmpName() {
-		return empName;
+	public String getEmployeeName() {
+		return employeeName;
 	}
-	public void setEmpName(String empName) {
-		this.empName = empName;
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
 	}
-	public String getDepName() {
-		return depName;
+	public String getEmpDepartment() {
+		return empDepartment;
 	}
-	public void setDepName(String depName) {
-		this.depName = depName;
+	public void setEmpDepartment(String empDepartment) {
+		this.empDepartment = empDepartment;
 	}
+	
 }
-
 
 public class EmployeeDepartment {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		List<Employee> emp=Arrays.asList(
 				new Employee("Ram","Dev"),
 				new Employee("Sam","Dev"),
@@ -37,15 +37,13 @@ public class EmployeeDepartment {
 				new Employee("Nikhil","LEAD"),
 				new Employee("Anusha","Dev"),
 				new Employee("Kiran","QA"),
-				new Employee("Samir","LEAD"));
-		
+				new Employee("Samir","LEAD")
+				);
 		String check="Dev";
-		
 		emp.stream()
-		.filter(employee->employee.getDepName().equals(check))
-		.map(Employee::getEmpName)
+		.filter(e->e.getEmpDepartment().equals(check))
+		.map(Employee::getEmployeeName)
 		.forEach(System.out::println);
-		
 				
 
 	}
